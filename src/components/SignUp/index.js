@@ -37,10 +37,10 @@ class SignUpFormBase extends Component {
 
     onSubmit = event => {
         const { username, email, passwordOne, isAdmin } = this.state;
-        const roles = {};
+        const roles = [];
     
         if (isAdmin) {
-          roles[ROLES.ADMIN] = ROLES.ADMIN;
+            roles.push(ROLES.ADMIN);
         }
     
         this.props.firebase
